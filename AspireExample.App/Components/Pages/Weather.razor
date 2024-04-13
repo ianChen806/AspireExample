@@ -1,8 +1,10 @@
 ﻿@page "/weather"
 @using AspireExample.App.Infra
 @using AspireExample.App.Models
+@using Microsoft.AspNetCore.OutputCaching
 @inject WeatherApiClient ApiClient
 @attribute [StreamRendering]
+@attribute [OutputCache(Duration = 5)]
 
 <PageTitle>Weather</PageTitle>
 

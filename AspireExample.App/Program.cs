@@ -2,7 +2,9 @@ using AspireExample.App.Components;
 using AspireExample.App.Infra;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.AddServiceDefaults();
+builder.AddRedisOutputCache("rediscache");
 
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
@@ -14,6 +16,7 @@ builder.Services.AddHttpClient<WeatherApiClient>(r =>
 
 var app = builder.Build();
 app.MapDefaultEndpoints();
+app.UseOutputCache();
 
 if (!app.Environment.IsDevelopment())
 {
