@@ -9,12 +9,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Aspire.Hosting" Version="8.0.0-preview.3.24105.21"/>
+        <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.0-preview.5.24201.12" />
+        <PackageReference Include="Aspire.Hosting.Redis" Version="8.0.0-preview.5.24201.12" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\AspireExample.Api\AspireExample.Api.csproj" />
       <ProjectReference Include="..\..\AspireExample.App\AspireExample.App.csproj" />
     </ItemGroup>
+
 
 </Project>
